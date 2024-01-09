@@ -26,7 +26,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/Sabina1205/Frontend-mentor-challenges-2/tree/main/results-summary-component-main)
-- Live Site URL: [Live]()
+- Live Site URL: [Live](https://results-summary-component-main-henna.vercel.app/)
 
 ## My process
 
