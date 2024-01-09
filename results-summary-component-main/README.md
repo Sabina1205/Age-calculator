@@ -5,9 +5,15 @@
 This is a completed solution for Results summary component from Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. <br> 
 <hr>
 
+![desktop_preview](https://github.com/Sabina1205/Frontend-mentor-challenges-2/assets/96692767/3afa0bee-4945-455f-8cc6-19ed43a88126)
+
 ## Overview
 
 ### Screenshots
+
+![mobile_preview](https://github.com/Sabina1205/Frontend-mentor-challenges-2/assets/96692767/6bf1b7c9-604f-40fc-a827-61b36aef0bfc)
+
+![active_state](https://github.com/Sabina1205/Frontend-mentor-challenges-2/assets/96692767/76d38383-aef4-48b0-93a9-b8db29c13d46)
 
 ### The challenge
 
