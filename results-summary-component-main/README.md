@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://github.com/Sabina1205/Frontend-mentor-challenges-2/tree/main/results-summary-component-main)
 - Live Site URL: [Live]()
 
 ## My process
