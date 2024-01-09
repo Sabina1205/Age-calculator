@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Hanken';
+    src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url("assets/fonts/static/HankenGrotesk-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Extra Bold';
+    src: url("assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url("assets/fonts/static/HankenGrotesk-Medium.ttf");
+}
+
+:root {
+    /* ==== PRIMARY COLORS === */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* ==== for flex items ==== */
+    --light-red-2: hsla(0, 100%, 67%, 0.1);
+    --orangey-yellow-2: hsla(39, 100%, 56%, 0.1);
+    --green-teal-2: hsla(166, 100%, 37%, 0.1);
+    --cobalt-blue-2: hsla(234, 85%, 45%, 0.1);
+
+    /* ==== GRADIENT COLORS ====*/
+    --gradient-bg-slate-blue: hsl(252, 100%, 67%);
+    --gradient-bg-royal-blue: hsl(241, 81%, 54%);
+
+    --cirle-violet-blue: hsla(256, 72%, 46%, 1);
+    --circle-persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* ==== NEUTRAL COLORS ====*/
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* ==== FONT SIZE ====*/
+    --font-paragraph-size: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken';
+    font-size: var(--font-paragraph-size);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 30px;
+}
+
+.result-item {
+    width: 300px;
+    padding: 40px 10px;
+    background: linear-gradient(var(--gradient-bg-slate-blue), var(--gradient-bg-royal-blue));
+    color: var(--white);
+    border-radius: 30px;
+    text-align: center;
+    color: var(--light-lavender);
+}
+
+#headline {
+    font-family: "Bold";
+}
+
+#circle {
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(var(--cirle-violet-blue), var(--circle-persian-blue));
+    color: var(--white);
+}
+
+#score {
+    color: var(--white);
+    font-family: 'Extra Bold';
+    font-size: 50px;
+}
+
+#info {
+    margin-bottom: 10px;
+    font-family: 'Medium';
+    font-size: 25px;
+    color: var(--white);
+}
+
+#description {
+    justify-content: center;
+    width: 225px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.summary-title {
+    font-family: "Bold";
+    margin-bottom: 20px;
+}
+
+.scores {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.bold-span {
+    font-family: "Bold";
+}
+
+.out-of {
+    color: var(--light-lavender);
+    font-family: "Medium";
+}
+
+.flex-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.flex-items:nth-child(2){
+    background-color: var(--light-red-2);
+}
+
+.flex-items:nth-child(3){
+    background-color: var(--orangey-yellow-2);
+}
+
+.flex-items:nth-child(4) {
+    background-color: var(--green-teal-2);
+}
+
+.flex-items:nth-child(5) {
+    background-color: var(--cobalt-blue-2);
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+button {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    font-family: 'Medium';
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+}
+
+button:hover {
+    background: linear-gradient(var(--gradient-bg-slate-blue), var(--gradient-bg-royal-blue));
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        overflow: hidden;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .result-item {
+        width: 100vw;
+        padding: 20px 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    #info {
+        font-size: 22px;
+    }
+
+    #description {
+        font-size: 14px;
+    }
+    
+    .summary-item {
+        gap: 10px;
+    }
+}
