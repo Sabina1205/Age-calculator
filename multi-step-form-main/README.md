@@ -10,6 +10,10 @@ This is a completed solution for Multi-step form solution from Frontend Mentor. 
 
 ### Screenshots
 
+![desktop_preview](https://github.com/Sabina1205/Frontend-mentor-challenges-2/assets/96692767/bac61ec5-a7a6-4b41-8e99-20ac587e93b3)
+
+![mobile_preview](https://github.com/Sabina1205/Frontend-mentor-challenges-2/assets/96692767/de44d146-c6d8-4afa-a75f-b32daa656b21)
+
 ### The challenge
 
 Users should be able to:
