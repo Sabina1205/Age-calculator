@@ -1,0 +1,599 @@
+@font-face {
+  src: url("assets/fonts/Ubuntu-Regular.ttf");
+  font-family: "Ubuntu";
+}
+
+@font-face {
+  src: url("assets/fonts/Ubuntu-Medium.ttf");
+  font-family: "Ubuntu Medium";
+}
+
+@font-face {
+  src: url("assets/fonts/Ubuntu-Bold.ttf");
+  font-family: "Ubuntu Bold";
+}
+
+:root {
+  /* ==== PRIMARY COLORS ==== */
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsla(206, 94%, 87%, 0.49);
+  --strawberry-red: hsl(354, 84%, 57%);
+
+  /* ==== NEUTRAL COLORS ==== */
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-size-paragraph: 16px;
+
+  --button-font: "Ubuntu Medium";
+
+  --bold: "Ubuntu Bold";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu";
+  background-color: var(--light-blue);
+}
+
+p {
+  font-size: var(--font-size-paragraph);
+  color: var(--cool-gray);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--alabaster);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  width: 900px;
+  height: 550px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 30%;
+  height: 100%;
+  background: url("assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.first-p {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.second-p {
+  font-family: "Ubuntu medium";
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.symbol {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--light-blue);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.symbol.active {
+  background-color: var(--pastel-blue);
+  color: var(--marine-blue);
+  font-family: var(--bold);
+}
+
+/* complete right side  */
+
+.multi-step-form {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+/* when steps are active */
+
+.step.active {
+  display: flex;
+}
+
+/* STEP 1 */
+
+.step {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.headline-1 h1 {
+  margin-bottom: 10px;
+  font-family: "Ubuntu Medium";
+  color: var(--marine-blue);
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.label-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+label {
+  font-size: 14px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 12px;
+  border: 0.5px solid var(--light-gray);
+  border-radius: 8px;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.btn {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: auto;
+  padding-right: 40px;
+}
+
+.next {
+  width: 100px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--marine-blue);
+  color: var(--white);
+  cursor: pointer;
+  font-family: var(--button-font);
+  float: left;
+}
+
+/* STEP 2 */
+
+.step {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 125px;
+  height: 150px;
+  padding: 15px 30px 15px 15px;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid var(--cool-gray);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.box:hover {
+  border: 1px solid var(--purplish-blue);
+}
+
+.box.active {
+  border: 1px solid var(--purplish-blue);
+  background-color: var(--magnolia);
+}
+
+.package-name {
+  font-family: var(--bold);
+  color: var(--marine-blue);
+  margin-bottom: 5px;
+}
+
+.additional-text {
+  font-family: "Ubuntu Medium";
+  font-size: 12px;
+  color: var(--marine-blue);
+  margin-top: 5px;
+}
+
+.cost,
+.additional-text {
+  transition: 0.4s ease-in-out;
+}
+
+/* TOGGLE BUTTON */
+
+.monthly-yearly {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  background-color: var(--magnolia);
+  padding: 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: var(--marine-blue);
+  border-radius: 50px;
+}
+
+.toggle::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 100%;
+  top: 2.5px;
+  left: 2.5px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.toggle.active::before {
+  left: calc(100% - 15px - 2.5px);
+}
+
+.m-text.active,
+.y-text.active {
+  color: var(--marine-blue);
+  font-family: "Ubuntu Bold";
+}
+
+.m-text,
+.y-text {
+  color: var(--cool-gray);
+}
+
+.btn-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: auto;
+  padding-right: 40px;
+}
+
+.prev {
+  border: none;
+  background-color: transparent;
+  font-family: "Ubuntu Medium";
+  color: var(--cool-gray);
+  cursor: pointer;
+}
+
+/* STEP 3 */
+
+.step {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  accent-color: var(--purplish-blue);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.input-checkbox {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.check-info {
+  margin-left: 10px;
+}
+
+.check-info label {
+  font-family: var(--button-font);
+  color: var(--marine-blue);
+}
+
+.check-info p {
+  font-size: 12px;
+}
+
+.check-cost {
+  font-family: var(--bold);
+  font-size: 14px;
+  color: var(--purplish-blue);
+}
+
+/* STEP 4 */
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.information {
+  background-color: var(--magnolia);
+  border-radius: 10px;
+}
+
+.arcade {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.arcade-info p {
+  color: var(--marine-blue);
+  font-family: var(--button-font);
+}
+
+.change-plus-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.changeBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--cool-gray);
+  border-bottom: 2px solid var(--cool-gray);
+  font-family: var(--bold);
+}
+
+.line {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--light-gray);
+}
+
+.total-price {
+  color: var(--purplish-blue);
+  font-family: var(--bold);
+}
+
+.finishing-cost {
+  color: var(--marine-blue);
+  font-family: var(--bold);
+}
+
+.online-service,
+.larger-storage {
+  color: var(--marine-blue);
+}
+
+#confirm {
+  background-color: var(--purplish-blue);
+}
+
+/* STEP 5 */
+
+#step-5 {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-blue);
+  }
+
+  .form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .multi-step-form {
+    position: absolute;
+    display: flex;
+    top: 280px;
+    width: 80%;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 10px;
+  }
+
+  .step {
+    margin: 0;
+  }
+
+  .headline-1 h1 {
+    font-size: 25px;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding-right: 0;
+  }
+
+  .btn-2 {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 0;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/images/bg-sidebar-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 350px;
+    border-radius: 0;
+  }
+
+  .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+  }
+
+  .text {
+    display: none;
+  }
+
+  /* STEP 2 */
+
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    gap: 20px;
+    border: 1px solid var(--cool-gray);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .m-text,
+  .y-text {
+    font-size: 14px;
+  }
+
+  /* STEP 3 */
+
+  .checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* STEP 3 */
+
+  .checkbox {
+    height: 70px;
+  }
+
+  .check-cost {
+    font-family: "Ubuntu";
+  }
+
+  /* STEP 4 */
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  /* STEP 5 */
+
+  .step-5 {
+    padding: 20px;
+  }
+}
