@@ -1,13 +1,13 @@
 # Frontend Mentor 
 ## Welcome
 
-These are completed challenges from the Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+These are completed challenges from Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Overview
 
 ### The challenges
 
-- Use HTML, CSS, and JavaScript.
+- Used HTML, CSS, JavaScript and JSON.
 - Exercise responsive web design, flexbox, grid CSS, and so on.
 
 ## My process
