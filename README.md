@@ -19,6 +19,7 @@ These are completed challenges from Frontend Mentor. Frontend Mentor challenges 
 - Flexbox
 - CSS Grid
 - JavaScript
+- JSON
 
 ### What I learned
 
